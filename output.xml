@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230612 19:38:27.175" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="E:\wazne\robot\tests.robot">
+<test id="s1-t1" name="Attach UE and Verify Attachment" line="6">
+<kw name="Connect to UE Manager" library="keywords">
+<kw name="Open Connection" library="Telnet">
+<arg>${HOST}</arg>
+<arg>${PORT}</arg>
+<doc>Opens a new Telnet connection to the given host and port.</doc>
+<msg timestamp="20230612 19:38:27.201" level="INFO">Opening connection to pk-robot.ddns.net:23 with prompt: None</msg>
+<msg timestamp="20230612 19:38:48.289" level="FAIL">TimeoutError: [WinError 10060] Próba połączenia nie powiodła się, ponieważ połączona strona nie odpowiedziała poprawnie po ustalonym okresie czasu lub utworzone połączenie nie powiodło się, ponieważ połączony host nie odpowiedział</msg>
+<status status="FAIL" starttime="20230612 19:38:27.201" endtime="20230612 19:38:48.302"/>
+</kw>
+<kw name="Login" library="Telnet">
+<arg>username</arg>
+<arg>password</arg>
+<doc>Logs in to the Telnet server with the given user information.</doc>
+<status status="NOT RUN" starttime="20230612 19:38:48.302" endtime="20230612 19:38:48.302"/>
+</kw>
+<status status="FAIL" starttime="20230612 19:38:27.201" endtime="20230612 19:38:48.302"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${ue_id}</var>
+<arg>UE001</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230612 19:38:48.302" endtime="20230612 19:38:48.302"/>
+</kw>
+<kw name="Attach UE" library="keywords">
+<arg>${ue_id}</arg>
+<status status="NOT RUN" starttime="20230612 19:38:48.302" endtime="20230612 19:38:48.302"/>
+</kw>
+<kw name="Verify UE Attached" library="keywords">
+<arg>${ue_id}</arg>
+<status status="NOT RUN" starttime="20230612 19:38:48.302" endtime="20230612 19:38:48.303"/>
+</kw>
+<kw name="Disconnect">
+<status status="NOT RUN" starttime="20230612 19:38:48.303" endtime="20230612 19:38:48.303"/>
+</kw>
+<status status="FAIL" starttime="20230612 19:38:27.200" endtime="20230612 19:38:48.304">TimeoutError: [WinError 10060] Próba połączenia nie powiodła się, ponieważ połączona strona nie odpowiedziała poprawnie po ustalonym okresie czasu lub utworzone połączenie nie powiodło się, ponieważ połączony host nie odpowiedział</status>
+</test>
+<test id="s1-t2" name="Detach UE and Verify Detachment" line="13">
+<kw name="Connect to UE Manager" library="keywords">
+<kw name="Open Connection" library="Telnet">
+<arg>${HOST}</arg>
+<arg>${PORT}</arg>
+<doc>Opens a new Telnet connection to the given host and port.</doc>
+<msg timestamp="20230612 19:38:48.306" level="INFO">Opening connection to pk-robot.ddns.net:23 with prompt: None</msg>
+<msg timestamp="20230612 19:39:09.370" level="FAIL">TimeoutError: [WinError 10060] Próba połączenia nie powiodła się, ponieważ połączona strona nie odpowiedziała poprawnie po ustalonym okresie czasu lub utworzone połączenie nie powiodło się, ponieważ połączony host nie odpowiedział</msg>
+<status status="FAIL" starttime="20230612 19:38:48.306" endtime="20230612 19:39:09.370"/>
+</kw>
+<kw name="Login" library="Telnet">
+<arg>username</arg>
+<arg>password</arg>
+<doc>Logs in to the Telnet server with the given user information.</doc>
+<status status="NOT RUN" starttime="20230612 19:39:09.370" endtime="20230612 19:39:09.370"/>
+</kw>
+<status status="FAIL" starttime="20230612 19:38:48.305" endtime="20230612 19:39:09.371"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${ue_id}</var>
+<arg>UE001</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230612 19:39:09.371" endtime="20230612 19:39:09.371"/>
+</kw>
+<kw name="Attach UE" library="keywords">
+<arg>${ue_id}</arg>
+<status status="NOT RUN" starttime="20230612 19:39:09.371" endtime="20230612 19:39:09.371"/>
+</kw>
+<kw name="Verify UE Attached" library="keywords">
+<arg>${ue_id}</arg>
+<status status="NOT RUN" starttime="20230612 19:39:09.371" endtime="20230612 19:39:09.371"/>
+</kw>
+<kw name="Detach UE" library="keywords">
+<arg>${ue_id}</arg>
+<status status="NOT RUN" starttime="20230612 19:39:09.371" endtime="20230612 19:39:09.371"/>
+</kw>
+<kw name="Verify UE Not Attached">
+<arg>${ue_id}</arg>
+<status status="NOT RUN" starttime="20230612 19:39:09.372" endtime="20230612 19:39:09.372"/>
+</kw>
+<kw name="Disconnect">
+<status status="NOT RUN" starttime="20230612 19:39:09.373" endtime="20230612 19:39:09.373"/>
+</kw>
+<status status="FAIL" starttime="20230612 19:38:48.305" endtime="20230612 19:39:09.373">TimeoutError: [WinError 10060] Próba połączenia nie powiodła się, ponieważ połączona strona nie odpowiedziała poprawnie po ustalonym okresie czasu lub utworzone połączenie nie powiodło się, ponieważ połączony host nie odpowiedział</status>
+</test>
+<test id="s1-t3" name="Start and Stop Traffic" line="22">
+<kw name="Connect to UE Manager" library="keywords">
+<kw name="Open Connection" library="Telnet">
+<arg>${HOST}</arg>
+<arg>${PORT}</arg>
+<doc>Opens a new Telnet connection to the given host and port.</doc>
+<msg timestamp="20230612 19:39:09.375" level="INFO">Opening connection to pk-robot.ddns.net:23 with prompt: None</msg>
+<status status="FAIL" starttime="20230612 19:39:09.374" endtime="20230612 19:39:30.457"/>
+</kw>
+<kw name="Login" library="Telnet">
+<arg>username</arg>
+<arg>password</arg>
+<doc>Logs in to the Telnet server with the given user information.</doc>
+<status status="NOT RUN" starttime="20230612 19:39:30.457" endtime="20230612 19:39:30.457"/>
+</kw>
+<status status="FAIL" starttime="20230612 19:39:09.374" endtime="20230612 19:39:30.457"/>
+</kw>
+<kw name="Start Traffic" library="keywords">
+<status status="NOT RUN" starttime="20230612 19:39:30.458" endtime="20230612 19:39:30.458"/>
+</kw>
+<kw name="Stop Traffic" library="keywords">
+<status status="NOT RUN" starttime="20230612 19:39:30.458" endtime="20230612 19:39:30.458"/>
+</kw>
+<kw name="Disconnect">
+<status status="NOT RUN" starttime="20230612 19:39:30.459" endtime="20230612 19:39:30.459"/>
+</kw>
+<status status="FAIL" starttime="20230612 19:39:09.374" endtime="20230612 19:39:30.459">Execution terminated by signal</status>
+</test>
+<doc>UE Manager Application Tests</doc>
+<status status="FAIL" starttime="20230612 19:38:27.176" endtime="20230612 19:39:30.460"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Tests">Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
